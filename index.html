@@ -32,7 +32,7 @@
                         <li>
                             JavaScript
                             <ul>
-                                <li><span>자바스크립트</span></li>
+                                <li><span>바닐라 스크립트</span></li>
                                 <li><span>ES 6 활용</span></li>
                                 <li><span>React 기본</span></li>
                             </ul>
@@ -195,9 +195,96 @@
                                 </table>
                             </div>
                         </li>
+                        <li>
+                            <div class="img_area"><img src="./images/INJEA.PNG" alt=""></div>
+                            <div class="portfolio_cont">
+                                <h3>
+                                    <span class="num_portfolio">04</span>
+                                    인제대학병원 랜딩페이지
+                                </h3>
+                                <p class="summary">
+                                    포트폴리오용으로 만든 인제대학병원 랜딩 페이지입니다.
+                                </p>
+                                <ul class="point">
+                                    <li>
+                                        <span>바닐라 스크립트</span>
+                                    </li>
+                                    <li>
+                                        <span>슬라이드 제작</span>
+                                    </li>
+                                </ul>
+                                <div class="btn_area">
+                                    <a href="https://yms2.github.io/project02/" target="_blank" class="btn_goto">GoTo</a>
+                                </div>
+                                <table class="file_link">
+                                    <thead>
+                                        <tr>
+                                            <th id="col1">Category</th>
+                                            <th id="col2">Source (click!)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td headers="col1">
+                                                <span class="category html">HTML</span>
+                                            </td>
+                                            <td headers="col2">
+                                                <a href="https://github.com/yms2/project02/blob/main/index.html" target="_blank">index.html</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td headers="col1">
+                                                <span class="category css">CSS</span>
+                                            </td>
+                                            <td headers="col2">
+                                                <a href="https://github.com/yms2/project02/blob/main/css/index.css" target="_blank">index.css</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td headers="col1">
+                                                <span class="category js">JS</span>
+                                            </td>
+                                            <td headers="col2">
+                                                <a href="https://github.com/yms2/project02/blob/main/js/index.js" target="_blank">index.js</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
                     </ol>
                 </div>
+                <button type="button" class="btn_top"><span class="hidden_text">최상단으로 가기</span></button>
         </main>
+        <footer>
+            <h2>Contacts</h2>
+            <ul class="contact_list">
+                <li>
+                    <a href="#"><i class="far fa-envelope"></i>dbalstjd789@daum.net</a>
+                </li>
+                <li><i class="fas fa-phone"></i>010 4579 8492</li>
+                <li><a href="https://github.com/yms2"><i class="fab fa-github"></i>GitHub account</a></li>
+            </ul>
+        </footer>
     </div>
+    <script>
+        const html = document.querySelector('html');
+        const btnTop = html.querySelector('.btn_top');
+    
+        window.addEventListener('scroll', () => { // 스크롤 노출설정
+            if (html.scrollTop > 1170) {
+                btnTop.style.visibility = 'visible';
+            } else {
+                btnTop.style.visibility = 'hidden';
+            }
+        });
+    
+        btnTop.addEventListener('click', () => { // 클릭시
+            window.scroll({
+                behavior: 'smooth',
+                top: 0
+            });
+        });
+    </script>
 </body>
 </html>
